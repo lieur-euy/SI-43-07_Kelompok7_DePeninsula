@@ -1,5 +1,5 @@
     <!-- Carousel -->
-    <div class="container fixed-top">
+    <div class="container ">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
@@ -23,3 +23,11 @@
         </div>
     </div>
     </div></div>
+    <br>
+
+      <div class="container bg-LIGHT text-DARK p-5 shadow">
+          <h1 class="display-4">DePaninsula</h1>
+ <br>
+          <p>Depaninsula adalah website yang menyediakan tanaman dan alat lainnya</p>
+          
+      </div>

@@ -8,10 +8,10 @@
         <a href="#" ><img src="./src/logo.png" style="width: 10%;"> </a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="produk.php">Produk</a>
+            <a class="nav-link" href="{{route('produk')}}">Produk</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
@@ -114,3 +114,4 @@
       </div>
     </div>
     </div>
+    
