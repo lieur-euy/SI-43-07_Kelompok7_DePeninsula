@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route :: get('/', 'App\Http\Controllers\home@index')->name('home');
+Route :: get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 Route :: get('/produk', 'App\Http\Controllers\produk@index')->name('produk');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
