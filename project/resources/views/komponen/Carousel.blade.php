@@ -1,15 +1,15 @@
     <!-- Carousel -->
     <div class="container ">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
+        <div id="carouselExampleInterval" class="carousel slide shadow-lg container-kategori" data-bs-ride="carousel">
+          <div class="carousel-inner ">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="./src/img1.png" class="d-block w-100" alt="...">
+              <img src="./src/img1.png" class="d-block w-100 container-kategori" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="./src/img3.png" class="d-block w-100" alt="...">
+              <img src="./src/img3.png" class="d-block w-100 container-kategori" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./src/img2.png" class="d-block w-100" alt="...">
+              <img src="./src/img2.png" class="d-block w-100 container-kategori" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -25,9 +25,11 @@
     </div></div>
     <br>
 
-      <div class="container bg-LIGHT text-DARK p-5 shadow">
+      <div class="container  text-DARK p-5 shadow pbeli body">
           <h1 class="display-4">DePaninsula</h1>
  <br>
           <p>Depaninsula adalah website yang menyediakan tanaman dan alat lainnya</p>
+
+     
           
       </div>

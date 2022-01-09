@@ -64,7 +64,7 @@
   
   </style>
   </head>
-  <body>
+  <body class="bg-light">
       @include('komponen.navbar')
       
     <div class="container shadow-lg bg-light">
