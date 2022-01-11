@@ -20,10 +20,12 @@
   
         </ul>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a href="{{url('register')}}" type="button" class="btn btn-outline-success" data-bs-whatever="@mdo" >Registrasi</a>
-          <br>
-          <a href="login" type="button" class="btn btn-success" data-bs-whatever="@mdo">LOGIN</a>
-
+            <p> Hallo {{$user->name}}</p>
+            <br>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+            @csrf
+          <button type="submit" class="btn btn-danger" data-bs-whatever="@mdo">LOGOUT</button>
+        </form>
       </div>
     </div>
     </div>

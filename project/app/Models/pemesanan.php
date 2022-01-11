@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class pemesanan extends Model
 {
-    use HasFactory;
+    public function pemesanan()
+    {
+        return $this->hasMany('App\User', 'user_id','id');
+    }
 }

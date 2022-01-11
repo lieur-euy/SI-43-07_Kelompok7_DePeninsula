@@ -65,8 +65,13 @@
   </style>
   </head>
   <body class="bg-light">
+    @if(Auth::check())
       @include('komponen.navbar')
-      
+      @include('komponen.navbarsudahlogin')
+    @else
+      @include('komponen.navbar')
+    @endif
+
     <div class="container shadow-lg bg-light">
         @yield('content')
 
