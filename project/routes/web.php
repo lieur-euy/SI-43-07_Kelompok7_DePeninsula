@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin;
 use App\Http\Controllers\produk;
+use App\Http\Controllers\pesanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,9 @@ use App\Http\Controllers\produk;
 Route :: get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route :: get('/produk', 'App\Http\Controllers\admin\produkController@index')->name('produk');
+Route :: get('detail/{id}', 'App\Http\Controllers\admin\produkController@detail')->name('detail');
+Route :: post('pesan/{id}', 'App\Http\Controllers\pesanController@pesan');
+  
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -29,7 +33,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/login',[admin\auth\LoginController::class,'login'])->name('admin.login');
     Route::get('/logout',[admin\auth\LoginController::class,'logout'])->name('admin.logout');
     Route::get('/home',[admin\adminController::class,'index'])->name('admin.index');
-    Route :: get('/input', 'App\Http\Controllers\admin\produkController@create')->name('produk.input');
+    Route :: get('/input', 'App\Http\Controllers\admin\produkController@input')->name('produk.input');
     Route :: post('/create', 'App\Http\Controllers\admin\produkController@store')->name('produk.create');
     
 

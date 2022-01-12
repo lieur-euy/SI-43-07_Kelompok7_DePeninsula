@@ -17,6 +17,7 @@ class Pemesanan extends Migration
             $table->id();
             $table->integer('user_id');
             $table->date('tanggal');
+            $table->string('status');
             $table->integer('jumnlah_harga');
             $table->timestamps();
         });

@@ -14,6 +14,7 @@ class adminController extends Controller
 
     public function index(){
         $produk = produk::paginate(50);
+        
         return view("admin.index",  compact('produk'));
         }
     public function store(Request $request)
