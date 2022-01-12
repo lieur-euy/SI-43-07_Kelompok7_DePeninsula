@@ -19,8 +19,9 @@ class Produk extends Migration
             $table->integer('harga');
             $table->integer('stock');
             $table->string('deskripsi');
-            $table->integer('kategori');
-            $table->timestamps();
+            $table->string('kategori');
+            $table->string('img');
+
         });
     }
 

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin;
-
+use App\Http\Controllers\produk;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,8 @@ use App\Http\Controllers\admin;
 */
 
 Route :: get('/', 'App\Http\Controllers\HomeController@index')->name('home');
-Route :: get('/produk', 'App\Http\Controllers\produk@index')->name('produk');
+
+Route :: get('/produk', 'App\Http\Controllers\admin\produkController@index')->name('produk');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -28,4 +29,8 @@ Route::prefix('admin')->group(function(){
     Route::post('/login',[admin\auth\LoginController::class,'login'])->name('admin.login');
     Route::get('/logout',[admin\auth\LoginController::class,'logout'])->name('admin.logout');
     Route::get('/home',[admin\adminController::class,'index'])->name('admin.index');
+    Route :: get('/input', 'App\Http\Controllers\admin\produkController@create')->name('produk.input');
+    Route :: post('/create', 'App\Http\Controllers\admin\produkController@store')->name('produk.create');
+    
+
 });

@@ -114,39 +114,28 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Tambah produk</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+   
                         </ol>
-                          <a class="btn btn-primary" href="{{route('produk.input')}}">add</a>
-                            <div class="card-body">
-                                <table id="datatablesSimple" class="table">
-                               
-                                    <thead>
-                                        <tr>
-                                            <th>Name produk</th>
-                                            <th>harga</th>
-                                            <th>stock</th>
-                                            <th>deskripsi</th>
-                                            <th>kategori</th>
-                                            <th>img</th>
-                                        </tr>
-                                    </thead>
-                                    @foreach ($produk as $p)
-                                    <tfoot>
-                                        <tr>
-                                            <td>{{$p->nama_produk}}</td>
-                                            <td>{{$p->harga}}</td>
-                                            <td>{{$p->stock}}</td>
-                                            <td>{{$p->deskripsi}}</td>
-                                            <td>{{$p->kategori}}</td>
-                                            <td><img src="{{url('src')}}/{{$p->img}}" style="width: 15%"></td>
-                                        </tr>
-                                    </tbody>
-                                    @endforeach
-                                </table>
-                            </div>
-                        </div>
+        <!-- isi-->
+                        <form action="{{route('produk.create')}}" method="POST">
+                          @csrf
+                          <label>Nama produk</label>
+                          <input type="text" class="form-control" name="nama_produk" >
+                          <label>Harga</label>
+                          <input type="text" class="form-control" name="harga" >
+                          <label>stok</label>
+                          <input type="text" class="form-control" name="stock" >
+                          <label>Kategori</label>
+                          <input type="text" class="form-control" name="kategori" >
+
+                          <label>deskripsi</label>
+                          <input type="text" class="form-control" name="deskripsi" >
+                          <label>img</label>
+                          <input type="file" class="form-control" name="img" >
+                          <button type="submit" class="btn btn-primary" >imput</button>
+                        </form>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
