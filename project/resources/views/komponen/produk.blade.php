@@ -13,7 +13,7 @@
             <p class="pproduk">{{$p->nama}}</p>
             <div class="footer d-grid gap-2 d-md-flex justify-content-md-end">
               <p class="pproduk">{{$p->harga}}</p>
-              <a href="{{url('detail')}}/{{$p->id}}" class="btn btn-success me-md-2" type="button">Beli</a>
+              <a href="{{url('pesan')}}/{{$p->id}}" class="btn btn-success me-md-2" type="button">Beli</a>
           </div>
         </div> 
       </div>

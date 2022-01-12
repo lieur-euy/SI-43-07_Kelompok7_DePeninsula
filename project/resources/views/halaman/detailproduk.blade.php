@@ -26,6 +26,7 @@
       <div class="col-lg-6 col-md-3 col-sm-5 col-8">
         <div class="menu-produk shadow-lg">
             <form action="{{url('pesan')}}/{{$produk->id}}" method="POST">
+              @csrf
             <div class="input-group flex-nowrap input-group mb-3 ">
 
                 <span class="input-group-text" id="addon-wrapping">Jumlah</span>

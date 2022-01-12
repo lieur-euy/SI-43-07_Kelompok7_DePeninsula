@@ -48,5 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\pemesanan', 'user_id','id');
     }
+    public function pemesanan_detail()
+    {
+        return $this->hasMany('App\pemesanan_detail', 'pesanan_id','id');
+    }
 }
 

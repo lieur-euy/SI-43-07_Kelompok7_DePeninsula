@@ -11,11 +11,15 @@ class pemesanan extends Model
     public $timestamps = false;
     protected $guarded = ['id'];
     protected $filable = [
-        'id','user_id','tanggal', 'status', 'jumlah_harga','created_at','updated_at'
+        'id','user_id','tanggal', 'status', 'jumnlah_harga'
     ];
-    public function pemesanan()
+    public function user()
     {
 
-        return $this->hasMany('App\User', 'user_id','id');
+        return $this->belongsTo('App\User','user_id','id');
+    }
+    public function pemesanan_detail()
+    {
+        return $this->hasMany('App\pemesanan_detail', 'pemesanan_id','id');
     }
 }

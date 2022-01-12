@@ -19,7 +19,11 @@
   
   
         </ul>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a href="{{url('check-out')}}">  <i class="material-icons" style="font-size:30px;color:rgb(41, 43, 41);">shopping_cart</i></a>
+
+            <br>
             <p> Hallo {{$user->name}}</p>
             <br>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" >

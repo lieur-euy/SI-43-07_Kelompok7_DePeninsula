@@ -18,9 +18,10 @@ use App\Http\Controllers\pesanController;
 Route :: get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route :: get('/produk', 'App\Http\Controllers\admin\produkController@index')->name('produk');
-Route :: get('detail/{id}', 'App\Http\Controllers\admin\produkController@detail')->name('detail');
-Route :: post('pesan/{id}', 'App\Http\Controllers\pesanController@pesan');
-  
+Route :: get('pesan/{id}', 'App\Http\Controllers\admin\produkController@detail');
+Route :: post('pesan/{id}', 'App\Http\Controllers\admin\produkController@pesan'); 
+Route :: get('check-out', 'App\Http\Controllers\admin\produkController@check_out'); 
+Route :: delete('check-out/{id}', 'App\Http\Controllers\admin\produkController@delete'); 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
